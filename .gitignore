@@ -1,0 +1,29 @@
+# Excluir archivos de configuraciones personales
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Excluir binarios y archivos de compilación
+**/bin/
+**/obj/
+
+# Excluir archivos de configuración que contengan información sensible
+**/App.config
+
+# Excluir archivos de Visual Studio y VS Code
+.vs/
+.vscode/
+
+# Excluir archivos de registro y de base de datos local 
+*.log
+*.sqldb
+*.sqlite
+
+# Excluir archivos generados por la herramienta de migración y paquetes
+packages/
+**/migrations/
+
+# Excluir otros archivos que pueden contener información sensible
+**/*.csproj.user
+**/*.pubxml

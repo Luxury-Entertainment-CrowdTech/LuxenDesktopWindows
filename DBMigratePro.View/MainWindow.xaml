@@ -1,0 +1,46 @@
+﻿<Window x:Class="DBMigratePro.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        ui:WindowHelper.UseModernWindowStyle="True"
+        xmlns:local="clr-namespace:DBMigratePro.View"
+        mc:Ignorable="d"
+        Title="DBMigratePro - Database Migration Tool" Height="600" Width="1000">
+    <DockPanel LastChildFill="True">
+        <Menu DockPanel.Dock="Top">
+            <MenuItem x:Name="Inicio" Header="Inicio"/>
+            <MenuItem x:Name="ViewDataMongoDB" Header="Ver Datos MongoDB"/>
+            <MenuItem Header="Migraciones">
+                <MenuItem Header="De NoSQL a SQL">
+                    <MenuItem x:Name="MongoDBaSQLServer" Header="MongoDB a SQL Server"/>
+                </MenuItem>
+                <MenuItem Header="De SQL a NoSQL">
+                    <MenuItem x:Name="SQLServeraMongoDB" Header="SQL Server a MongoDB"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Gestion de Clientes">
+                <MenuItem Header="Registro Clientes">
+                    <MenuItem x:Name="CustomerRegister" Header="Registro de Clientes"/>
+                </MenuItem>
+                <MenuItem Header="Ver Clientes">
+                    <MenuItem x:Name="ViewCustomer" Header="Ver Clientes"/>
+                </MenuItem>
+                <MenuItem Header="Obtener Datos de Clientes">
+                    <MenuItem Header="SQL Server">
+                        <MenuItem x:Name="GetCustomerDataSQL" Header="Datos desde SQL Server"/>
+                    </MenuItem>
+                    <MenuItem Header="MongoDB">
+                        <MenuItem x:Name="GetCustomerDataMongoDB" Header="Datos desde MongoDB"/>
+                    </MenuItem>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="DocumentacionDelProyecto" Header="Documentación del Proyecto"/>
+        </Menu>
+
+        <ContentControl x:Name="MainContent">
+            <!-- Aquí irá la vista inicial, asegúrate de definir InicioView en WPF -->
+        </ContentControl>
+    </DockPanel>
+</Window>
